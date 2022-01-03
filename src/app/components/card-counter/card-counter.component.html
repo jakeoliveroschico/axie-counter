@@ -1,0 +1,36 @@
+<div class="counter">
+
+  <h1>CARD</h1>
+
+  <h2>{{ currentCard }}</h2>
+
+  <div class="cta-block">
+    <div class="cta">
+      <button (click)="cardCounterUsed('minus')">-</button>
+      <h4>{{ cardCounter.used }}</h4>
+      <button (click)="cardCounterUsed('add')">+</button>
+    </div>
+
+    <h5>Used</h5>
+  </div>
+
+  <div class="cta-block">
+    <div class="cta">
+      <button (click)="cardCounterGain('minus')">-</button>
+      <h4>{{ cardCounter.gain }}</h4>
+      <button (click)="cardCounterGain('add')">+</button>
+    </div>
+
+    <h5>Draw</h5>
+  </div>
+
+  <div class="cta-block">
+    <div class="cta">
+      <button (click)="cardCounterDestroy('minus')">-</button>
+      <h4>{{ cardCounter.destroyed }}</h4>
+      <button (click)="cardCounterDestroy('add')">+</button>
+    </div>
+
+    <h5>Discard</h5>
+  </div>
+</div>

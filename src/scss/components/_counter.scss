@@ -1,0 +1,28 @@
+.counter {
+  width: 300px;
+  text-align: center;
+
+  h2 {
+    display: block;
+  }
+
+  .cta-block {
+    padding-bottom: 8px;
+    border-bottom: 1px solid getColor(Ash);
+
+    .cta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 8px;
+
+      h4 {
+        padding: 0 24px;
+      }
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 12px;
+    }
+  }
+}

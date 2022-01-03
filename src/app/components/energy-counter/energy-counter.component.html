@@ -1,0 +1,36 @@
+<div class="counter">
+
+  <h1>ENERGY</h1>
+
+  <h2>{{ currentEnergy }}</h2>
+
+  <div class="cta-block">
+    <div class="cta">
+      <button (click)="energyCounterUsed('minus')">-</button>
+      <h4>{{ energyCounter.used }}</h4>
+      <button (click)="energyCounterUsed('add')">+</button>
+    </div>
+
+    <h5>Used</h5>
+  </div>
+
+  <div class="cta-block">
+    <div class="cta">
+      <button (click)="energyCounterGain('minus')">-</button>
+      <h4>{{ energyCounter.gain }}</h4>
+      <button (click)="energyCounterGain('add')">+</button>
+    </div>
+
+    <h5>Gain</h5>
+  </div>
+
+  <div class="cta-block">
+    <div class="cta">
+      <button (click)="energyCounterDestroy('minus')">-</button>
+      <h4>{{ energyCounter.destroyed }}</h4>
+      <button (click)="energyCounterDestroy('add')">+</button>
+    </div>
+
+    <h5>Destroyed</h5>
+  </div>
+</div>
