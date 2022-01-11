@@ -24,4 +24,13 @@ button {
   font-size: 1em;
   padding: 12px 16px;
   border-radius: 3px;
+
+  &.crimson {
+    color: getColor(White);
+    background-color: getColor(Crimson);
+  }
+
+  &.orange {
+    background-color: getColor(Orange);
+  }
 }

@@ -5,16 +5,37 @@
 
     <h4>Round {{ currentRound }}</h4>
 
+
+
     <div class="side-by-side">
       <app-energy-counter></app-energy-counter>
       <app-card-counter></app-card-counter>
     </div>
 
     <div class="main-cta">
-      <button (click)="endTurn()">End Turn</button>
-      <button (click)="resetCounter()">Reset Counter</button>
-      <button (click)="newAxieCounter()">New Counter</button>
+      <div class="cta">
+        <button (click)="resetCounter()">Reset Counter</button>
+        <button class="button crimson" (click)="endTurn()">End Turn</button>
+      </div>
+
     </div>
+
+
+    <div class="set-count">
+      <div class="cta">
+
+        <input type="number">
+        <button class="button crimson">Set Card Count</button>
+      </div>
+
+      <span>This action cannot be undone!</span>
+    </div>
+
+    <div class="new-counter">
+      <button class="button orange" (click)="newAxieCounter()">New Counter</button>
+    </div>
+
+
 
   </div>
 

@@ -4,30 +4,76 @@
     align-items: center;
     flex-direction: column;
 
+    padding: 40px 16px;
+
     .side-by-side {
       display: flex;
       margin-bottom: 24px;
+      margin-top: 32px;
+
+      app-energy-counter {
+        .counter {
+          margin-right: 32px;
+        }
+      }
     }
 
     .main-cta {
       display: flex;
       flex-direction: column;
+      margin-bottom: 32px;
 
+      .cta {
+        button {
+          &:not(:last-of-type) {
+            margin-right: 16px;
+          }
+        }
+      }
+
+      > button {
+        margin-bottom: 32px;
+      }
+    }
+
+    .set-count {
+      width: 200px;
+      text-align: center;
+      margin-bottom: 32px;
+
+      .cta {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 12px;
+
+        input {
+          text-align: center;
+          font-size: 32px;
+          font-weight: bold;
+          margin-bottom: 8px;
+          outline: none;
+
+          &::-webkit-outer-spin-button,
+          &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          /* Firefox */
+          &[type="number"] {
+            -moz-appearance: textfield;
+          }
+        }
+      }
+
+      span {
+        color: getColor(Crimson);
+      }
+    }
+
+    .new-counter {
       button {
-        &:first-of-type {
-          color: White;
-          background-color: #e57e05;
-        }
-
-        &:not(:last-of-type) {
-          margin-bottom: 12px;
-        }
-
-        &:last-of-type {
-          color: White;
-          margin-top: 12px;
-          background-color: #e5474a;
-        }
+        color: getColor(White);
       }
     }
   }

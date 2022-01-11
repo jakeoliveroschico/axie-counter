@@ -51,4 +51,12 @@ export class CardCounterComponent implements OnInit {
     this.axieCounterService.cardCounterDestroy(operation);
   }
 
+  validate(evt: any) {
+    if (evt.key == 1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 }
