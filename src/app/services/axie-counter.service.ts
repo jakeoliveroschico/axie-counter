@@ -11,8 +11,8 @@ export class AxieCounterService {
   currentEnergy: number = 3;
   currentCard: number = 6;
 
-  energyCounter: Counter = {used: 0, gain: 0, destroyed: 0};
-  cardCounter: Counter = {used: 0, gain: 0, destroyed: 0};
+  energyCounter: Counter = { used: 0, gain: 0, destroyed: 0 };
+  cardCounter: Counter = { used: 0, gain: 0, destroyed: 0 };
 
 
   currentRoundSub = new Subject<number>();
@@ -69,8 +69,8 @@ export class AxieCounterService {
   }
 
   resetCounter() {
-    this.energyCounter = {used: 0, gain: 0, destroyed: 0};
-    this.cardCounter = {used: 0, gain: 0, destroyed: 0};
+    this.energyCounter = { used: 0, gain: 0, destroyed: 0 };
+    this.cardCounter = { used: 0, gain: 0, destroyed: 0 };
 
     this.energyCounterSub.next(this.energyCounter);
     this.cardCounterSub.next(this.cardCounter);
@@ -80,7 +80,7 @@ export class AxieCounterService {
   endTurn() {
     var energy = this.currentEnergy - this.energyCounter.used;
     var card = this.currentCard - this.cardCounter.used;
-    
+
     if (this.energyCounter.gain > 0) {
       energy = energy + this.energyCounter.gain;
     }
@@ -201,5 +201,5 @@ export class AxieCounterService {
     this.cardCounterSub.next(this.cardCounter);
   }
 
-  
+
 }
