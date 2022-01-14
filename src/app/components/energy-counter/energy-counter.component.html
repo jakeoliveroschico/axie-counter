@@ -1,37 +1,52 @@
 <div class="counter">
 
-  <h1>ENERGY</h1>
-
-  <h2>{{ currentEnergy }}</h2>
-
-  <div class="cta-block">
-    <div class="cta">
-      <button (click)="energyCounterUsed('minus')">-</button>
-      <h4>{{ energyCounter.used }}</h4>
-      <button (click)="energyCounterUsed('add')">+</button>
+  <div class="cur-count">
+    <h2 class="t-shadow--1">{{ currentEnergy }}</h2>
+    <div class="cur-img">
+      <img src="../../../assets/energy-img.svg" alt="">
     </div>
-
-    <h5>Used</h5>
   </div>
 
   <div class="cta-block">
     <div class="cta">
-      <button (click)="energyCounterGain('minus')">-</button>
-      <h4>{{ energyCounter.gain }}</h4>
-      <button (click)="energyCounterGain('add')">+</button>
+      <button class="button crimson sm" (click)="energyCounterUsed('minus')">
+        <span class="t-shadow">-</span>
+      </button>
+      <h4 class="t-shadow--1">{{ energyCounter.used }}</h4>
+      <button class="button skyblue sm" (click)="energyCounterUsed('add')">
+        <span class="t-shadow">+</span>
+      </button>
     </div>
 
-    <h5>Gain</h5>
+    <h5 class="t-shadow--1">Used</h5>
   </div>
 
   <div class="cta-block">
     <div class="cta">
-      <button (click)="energyCounterDestroy('minus')">-</button>
-      <h4>{{ energyCounter.destroyed }}</h4>
-      <button (click)="energyCounterDestroy('add')">+</button>
+      <button class="button crimson sm" (click)="energyCounterGain('minus')">
+        <span class="t-shadow">-</span>
+      </button>
+      <h4 class="t-shadow--1">{{ energyCounter.gain }}</h4>
+      <button class="button skyblue sm" (click)="energyCounterGain('add')">
+        <span class="t-shadow">+</span>
+      </button>
     </div>
 
-    <h5>Destroyed</h5>
+    <h5 class="t-shadow--1">Gain</h5>
+  </div>
+
+  <div class="cta-block">
+    <div class="cta">
+      <button class="button crimson sm" (click)="energyCounterDestroy('minus')">
+        <span class="t-shadow">-</span>
+      </button>
+      <h4 class="t-shadow--1">{{ energyCounter.destroyed }}</h4>
+      <button class="button skyblue sm" (click)="energyCounterDestroy('add')">
+        <span class="t-shadow">+</span>
+      </button>
+    </div>
+
+    <h5 class="t-shadow--1">Destroyed</h5>
   </div>
 
 

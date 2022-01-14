@@ -2,3 +2,13 @@
     Set default global styles for inputs elements:
     e.g. select, input[type="text"], input[type="email"], input[type="number"]
 */
+
+
+input,
+.input {
+  width: 100%;
+  border-radius: 4px;
+  background-color: colorOpacity(getColor(Brown), 15);
+  outline: none;
+  border: none;
+}

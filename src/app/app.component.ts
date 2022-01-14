@@ -12,7 +12,7 @@ export class AppComponent {
   currentRound: number = 1;
 
   constructor(private axieCounterService: AxieCounterService) {
-    this.axieCounterService.currentRoundSub.subscribe( (curRound) => {
+    this.axieCounterService.currentRoundSub.subscribe((curRound) => {
       this.currentRound = curRound
     })
   }
@@ -25,7 +25,18 @@ export class AppComponent {
     this.axieCounterService.resetCounter();
   }
 
+  setCurrentCard(cardInput: any) {
+    if (cardInput.value.length > 0) {
+      this.axieCounterService.setCurrentCard(cardInput.value);
+      this.axieCounterService.currentCardSub.next(cardInput.value);
+      cardInput.value = '';
+    }
+
+  }
+
   newAxieCounter() {
     this.axieCounterService.newAxieCounter();
   }
+
+
 }

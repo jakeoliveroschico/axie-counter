@@ -20,17 +20,124 @@
 .button,
 button {
   @extend %button-default;
-
   font-size: 1em;
-  padding: 12px 16px;
-  border-radius: 3px;
+  padding: 20px 32px;
+  border-radius: 8px;
+  letter-spacing: 2px;
+  box-shadow: inset 0px -4px 0px 0px colorOpacity(getColor(Black), 20);
+  border: 4px solid getColor(Sienna);
+  text-shadow: 2px 3px colorOpacity(getColor(Black), 20);
+
+  span {
+    display: block;
+  }
 
   &.crimson {
     color: getColor(White);
     background-color: getColor(Crimson);
+
+    &:hover {
+      background-color: shade(getColor(Crimson), 5);
+    }
+
+    &:active {
+      background-color: shade(getColor(Crimson), 5);
+      box-shadow: inset 0px 2px 0px 0px colorOpacity(getColor(Black), 20);
+
+      span {
+        transform: translateY(1px) !important;
+      }
+    }
+  }
+
+  &.skyblue {
+    color: getColor(White);
+    background-color: getColor(SkyBlue);
+
+    &:hover {
+      background-color: shade(getColor(SkyBlue), 5);
+    }
+
+    &:active {
+      background-color: shade(getColor(SkyBlue), 5);
+      box-shadow: inset 0px 2px 0px 0px colorOpacity(getColor(Black), 20);
+
+      span {
+        transform: translateY(1px) !important;
+      }
+    }
   }
 
   &.orange {
+    color: getColor(White);
     background-color: getColor(Orange);
+
+    &:hover {
+      background-color: shade(getColor(Orange), 5);
+    }
+
+    &:active {
+      background-color: shade(getColor(Orange), 5);
+      box-shadow: inset 0px 2px 0px 0px colorOpacity(getColor(Black), 20);
+
+      span {
+        transform: translateY(1px) !important;
+      }
+    }
   }
+
+  &.gold {
+    color: getColor(White);
+    background-color: getColor(Gold);
+
+    &:hover {
+      background-color: shade(getColor(Gold), 5);
+    }
+
+    &:active {
+      background-color: shade(getColor(Gold), 5);
+      box-shadow: inset 0px 2px 0px 0px colorOpacity(getColor(Black), 20);
+
+      span {
+        transform: translateY(1px) !important;
+      }
+    }
+  }
+
+  &.green {
+    color: getColor(White);
+    background-color: getColor(Green);
+
+    &:hover {
+      background-color: shade(getColor(Green), 5);
+    }
+
+    &:active {
+      background-color: shade(getColor(Green), 5);
+      box-shadow: inset 0px 2px 0px 0px colorOpacity(getColor(Black), 20);
+
+      span {
+        transform: translateY(1px) !important;
+      }
+    }
+  }
+
+  &.sm {
+    padding: 14px 16px
+  }
+
+  &.inner-shadow {
+    &--1 {
+      box-shadow: inset 0px -6px 0px 0px colorOpacity(getColor(Black), 20);
+
+      &:active {
+        box-shadow: inset 0px 4px 0px 0px colorOpacity(getColor(Black), 20);
+
+      }
+    }
+  }
+
+
+
+
 }

@@ -3,14 +3,19 @@ html,
 body {
   font-size: 16px;
   line-height: 1.2;
+  letter-spacing: 2px;
+  font-family: 'Bowlby One', cursive;
+  font-weight: lighter;
+  color: getColor(White);
 }
 
 p {
   font-size: 1em;
 }
 
-a {
-}
+a {}
+
+
 
 /* Headings */
 h1,
@@ -18,13 +23,26 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+span {
   &.uppercase {
     text-transform: uppercase;
   }
 
   &.light {
-    font-weight: 100;
+    font-weight: 300;
+  }
+
+  &.t-shadow {
+    text-shadow: 2px 2px colorOpacity(getColor(Black), 20);
+
+    &--1 {
+      text-shadow: 4px 4px colorOpacity(getColor(Black), 20);
+    }
+
+    &--2 {
+      text-shadow: 6px 6px colorOpacity(getColor(Black), 20);
+    }
   }
 }
 

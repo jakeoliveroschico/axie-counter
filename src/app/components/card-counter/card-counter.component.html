@@ -1,37 +1,52 @@
 <div class="counter">
 
-  <h1>CARD</h1>
-
-  <h2>{{ currentCard }}</h2>
-
-  <div class="cta-block">
-    <div class="cta">
-      <button (click)="cardCounterUsed('minus')">-</button>
-      <h4>{{ cardCounter.used }}</h4>
-      <button (click)="cardCounterUsed('add')">+</button>
+  <div class="cur-count">
+    <h2 class="t-shadow--1">{{ currentCard }}</h2>
+    <div class="cur-img">
+      <img src="../../../assets/card-img.svg" alt="">
     </div>
-
-    <h5>Used</h5>
   </div>
 
   <div class="cta-block">
     <div class="cta">
-      <button (click)="cardCounterGain('minus')">-</button>
-      <h4>{{ cardCounter.gain }}</h4>
-      <button (click)="cardCounterGain('add')">+</button>
+      <button class="button crimson sm" (click)="cardCounterUsed('minus')">
+        <span class="t-shadow">-</span>
+      </button>
+      <h4 class="t-shadow--1">{{ cardCounter.used }}</h4>
+      <button class="button skyblue sm" (click)="cardCounterUsed('add')">
+        <span class="t-shadow">+</span>
+      </button>
     </div>
 
-    <h5>Draw</h5>
+    <h5 class="t-shadow--1">Used</h5>
   </div>
 
   <div class="cta-block">
     <div class="cta">
-      <button (click)="cardCounterDestroy('minus')">-</button>
-      <h4>{{ cardCounter.destroyed }}</h4>
-      <button (click)="cardCounterDestroy('add')">+</button>
+      <button class="button crimson sm" (click)="cardCounterGain('minus')">
+        <span class="t-shadow">-</span>
+      </button>
+      <h4 class="t-shadow--1">{{ cardCounter.gain }}</h4>
+      <button class="button skyblue sm" (click)="cardCounterGain('add')">
+        <span class="t-shadow">+</span>
+      </button>
     </div>
 
-    <h5>Discard</h5>
+    <h5 class="t-shadow--1">Draw</h5>
+  </div>
+
+  <div class="cta-block">
+    <div class="cta">
+      <button class="button crimson sm" (click)="cardCounterDestroy('minus')">
+        <span class="t-shadow">-</span>
+      </button>
+      <h4 class="t-shadow--1">{{ cardCounter.destroyed }}</h4>
+      <button class="button skyblue sm" (click)="cardCounterDestroy('add')">
+        <span class="t-shadow">+</span>
+      </button>
+    </div>
+
+    <h5 class="t-shadow--1">Discard</h5>
   </div>
 
 
