@@ -1,57 +1,49 @@
 <div class="axie-app">
 
-  <div class="global-wrapper">
+  <div class="axie-app-wrapper">
 
-    <div class="axie-app-wrapper">
-      <h1 class="light t-shadow--1">Axie Counter</h1>
+    <h1 class="light t-shadow--1">Axie Counter</h1>
+    <h2 class="light t-shadow--1">Round {{ currentRound }}</h2>
 
-      <h2 class="light t-shadow--1">Round {{ currentRound }}</h2>
+    <div class="side-by-side">
+      <app-energy-counter></app-energy-counter>
+      <app-card-counter></app-card-counter>
+    </div>
 
+    <div class="main-cta">
+      <div class="cta">
 
+        <button class="button crimson inner-shadow--1" (click)="resetCounter()">
+          <span>Reset</span>
+        </button>
 
-      <div class="side-by-side">
-        <app-energy-counter></app-energy-counter>
-        <app-card-counter></app-card-counter>
-      </div>
-
-      <div class="main-cta">
-        <div class="cta">
-
-          <button class="button crimson inner-shadow--1" (click)="resetCounter()">
-            <span>Reset</span>
-          </button>
-
-          <button class="button gold inner-shadow--1" (click)="endTurn()">
-            <span>End Turn</span>
-          </button>
-        </div>
-
-      </div>
-
-
-      <div class="set-count">
-
-        <input #cardInput type="number">
-        <div class="cta">
-          <button class="button crimson inner-shadow--1" (click)="setCurrentCard(cardInput)">
-            <span>Set Card</span>
-          </button>
-          <button class="button orange card-info">
-            <span>?</span>
-          </button>
-        </div>
-
-      </div>
-
-      <div class="new-counter">
-        <button class="button green inner-shadow--1" (click)="newAxieCounter()">
-          <span>New Counter</span>
+        <button class="button gold inner-shadow--1" (click)="endTurn()">
+          <span>End Turn</span>
         </button>
       </div>
+
+    </div>
+
+    <div class="set-count">
+
+      <input #cardInput type="number">
+      <div class="cta">
+        <button class="button crimson inner-shadow--1" (click)="setCurrentCard(cardInput)">
+          <span>Set Card</span>
+        </button>
+        <button class="button orange card-info">
+          <span>?</span>
+        </button>
+      </div>
+
+    </div>
+
+    <div class="new-counter">
+      <button class="button green inner-shadow--1" (click)="newAxieCounter()">
+        <span>New Counter</span>
+      </button>
     </div>
 
   </div>
-
-
 
 </div>
