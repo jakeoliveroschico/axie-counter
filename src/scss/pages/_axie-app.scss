@@ -13,7 +13,7 @@
 }
 
 .axie-app-wrapper {
-  height: 992px;
+  // height: 992px;
   width: 632px;
   position: relative;
   border-radius: 16px;
@@ -127,6 +127,13 @@
       }
     }
   }
+}
+
+.reserved {
+  margin-top: 40px;
+  font-size: 12px;
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif;
 }
 
 
