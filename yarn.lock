@@ -4293,6 +4293,13 @@ neo-async@^2.6.2:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
+ng2-adsense@^10.1.0:
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/ng2-adsense/-/ng2-adsense-10.1.0.tgz#243b9a3a3b97a29687b5843c2d0ec4b208ec33cb"
+  integrity sha512-S5wDPSzohmwUGhXn5foPz1mWx/ED2v3OtXmmA+m2DUAAiIDzVBLE6Zo9Bimlix3Z0wPo0oWPJo+qfs19mGKVxA==
+  dependencies:
+    tslib "^2.3.0"
+
 nice-napi@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/nice-napi/-/nice-napi-1.0.2.tgz#dc0ab5a1eac20ce548802fc5686eaa6bc654927b"
